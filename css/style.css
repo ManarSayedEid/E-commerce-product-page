@@ -16,7 +16,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
-body{
+body {
     font-family: 'Kumbh Sans', sans-serif;
     box-sizing: border-box;
 }
@@ -26,7 +26,7 @@ body{
     margin: auto;
 }
 
-.menu{
+.menu {
     border-bottom: 3px solid var(--light-grayish-blue);
     margin-right: 35px;
     margin-left: 35px;
@@ -69,63 +69,67 @@ section {
     margin: 2% 8%;
 }
 
-section .product-images .product-main-image img{
+.product-main-image img {
     width: 25rem;
     border-radius: 10px;
 }
 
-.product-details , .product-images {
+.product-details,
+.product-images {
     display: inline-block;
 }
 
-section .product-preview-images{
-    width: 25rem
+.product-preview-images {
+    width: 25rem;
 }
     
-section .product-preview-images img{
+.product-preview-images img {
+
         width: 83px;
         border-radius: 5px;
         margin-right: .8rem;
-        
 }
 
-section .product-details {
+.product-details {
+    
     width: 630px;
     vertical-align: top;
     padding: 3rem 0rem 1.8rem 5rem;
 }
 
+/* don't use star selector */
 .product-details > * {
     margin:20px
 }
 
-.product-details h5{
+.product-details h5 {
     color: var(--orange);
     text-transform: uppercase;
     font-weight: 700;
     font-size: 17px;
 }
 
-.product-details h1{
+.product-details h1 {
     font-size: 45px;
     color: var(--black);
     font-weight: 700;
 }
 
-.product-details p{
+.product-details p {
     font-size: 16px;
     font-weight: 400;
     color: var(--black) ;
 }
 
-.product-details .price *{
+.product-details .price * {
     font-weight: 700;
 }
-.product-details .price .after-discount{
+
+.product-details .price .after-discount {
 font-size: 19px;
 }
 
-.product-details .price .discount-precentage{
+.product-details .price .discount-precentage {
 background-color: var(--pale-orange);
 color: var(--orange);
 margin: 10px;
@@ -133,28 +137,29 @@ padding: 5px;
 font-size: 14.5px;
 }
 
-.product-details .price .before-discount{
+.product-details .price .before-discount {
 color: var(--dark-grayish-blue);
 font-size: 14.5px;
 display: block;
 margin-top: 15px;
 }
 
-.product-details .product-cart .minus,.plus{
+.product-details .product-cart .minus,.plus {
     padding: .7rem 1rem;
     background-color: var(--light-grayish-blue);
     border: none;
     cursor: pointer;
 }
 
-.product-details .product-cart .minus img{
-    width: 80%;
-}
-.product-details .product-cart .plus img{
+.product-details .product-cart .minus img {
     width: 80%;
 }
 
-.product-details .product-cart input{
+.product-details .product-cart .plus img {
+    width: 80%;
+}
+
+.product-details .product-cart input {
     display: inline-block;
     border: none;
     width: 25px;
@@ -164,12 +169,14 @@ margin-top: 15px;
     font-weight: 700;
     text-align: center;
 }
-.add-to-cart{
+
+.add-to-cart {
     padding: .6rem 2.5rem;
     border-radius: 5px;
     text-align: center;
 }
-.product-details .product-cart .add-to-cart{
+
+.product-details .product-cart .add-to-cart {
   text-decoration: none;
   color: var(--light-grayish-blue);
   background-color: var(--orange);
@@ -180,7 +187,7 @@ margin-top: 15px;
   outline: none;
 }
 
-.product-details .product-cart .add-to-cart img{
+.product-details .product-cart .add-to-cart img {
 width: 18%;
 margin-right: 10px;
 } 
