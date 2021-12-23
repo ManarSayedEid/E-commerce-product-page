@@ -63,8 +63,8 @@ section {
 }
 
 .product-images {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto;
 }
 
 .product-details,
@@ -72,9 +72,8 @@ section {
     width: 45vw;
 }
 
-.product-main-image img,
-.product-preview-images {
-    width: 43vw;
+.product-main-image img {
+    width: 42vw;
 }
 
 .product-main-image img {
@@ -83,22 +82,11 @@ section {
     border-radius: 10px;
 }
 
-.product-preview-images {
-    display: flex;
-}
-
 .product-preview-images img {
-    width: 10vw;
+    width: 10.2vw;
     border-radius: 5px;
     object-fit: cover;
-    flex: 1;
-    margin-right: 10px;
 }
-
-.product-preview-images img:last-child {
-    margin-right: 0px;
-}
-
 
 .product-details {
     padding-top: 2.5rem;
@@ -245,16 +233,12 @@ section {
     }
 
     .product-images {
-        flex-direction: row;
+        column-gap: 0px;
+        grid-template-columns: auto auto;
     }
 
-    .product-preview-images {
-        flex-direction: column;
-    }
-
-    .product-main-image img,
-    .product-preview-images {
-        height: 70vh;
+    .product-preview-images img {
+        height: 15.7vh;
     }
 
     .product-details {
@@ -264,16 +248,6 @@ section {
     .product-main-image img {
         width: 75vw;
         margin-right: 10px;
-    }
-
-    .product-preview-images img {
-        height: 15vh;
-        margin-bottom: 5px;
-        flex: 1;
-    }
-
-    .product-preview-images img:last-child {
-        margin-bottom: 0px;
     }
 
 }
@@ -289,25 +263,17 @@ section {
     }
 
     .product-images {
-        flex-direction: column;
-    }
-
-    .product-preview-images {
-        flex-direction: row;
+        grid-template-columns: auto;
     }
 
     .product-main-image img,
-    .product-preview-images,
     .product-details {
         width: 85vw;
     }
 
-    .product-main-image img
+    .product-preview-images img
     {
-        height: 65vh;
-    }
-    .product-preview-images {
-        height: 15vh;
+        width: 20.6vw;
     }
 
     .product-details{
