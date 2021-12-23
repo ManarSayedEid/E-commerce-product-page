@@ -22,10 +22,11 @@
 
       <div class="mobile-view">
         <ul>
-          <li onclick="openNav()"><i class="fas fa-bars"></i></li>
+          <li onclick="toggleMenu()"><i class="fas fa-bars"></i></li>
           <li class="logo"><a href="#"> <img src="/images/logo.svg" alt="logo"> </a></li>
         </ul>
-        <div class="mobile-nav-links">
+
+        <div class="mobile-nav-links toggleMenu">
           <ul>
             <li> <a href="#">Collections</a> </li>
             <li> <a href="#">Men</a> </li>
@@ -101,16 +102,7 @@
 
   </section>
 
-  <script>
-    function openNav() {
-      let display = document.getElementsByClassName('mobile-nav-links')[0].style.display;
-      if (display === 'block') {
-        document.getElementsByClassName('mobile-nav-links')[0].style.display = 'none'
-      } else {
-        document.getElementsByClassName('mobile-nav-links')[0].style.display = 'block'
-      }
-    }
-  </script>
+  <script src="./javaScript/script.js"></script>
 </body>
 
 </html>

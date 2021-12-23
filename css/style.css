@@ -12,13 +12,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 body {
     font-family: 'Kumbh Sans', sans-serif;
-    box-sizing: border-box;
 }
 
 .header {
@@ -57,8 +57,6 @@ ul {
 }
 
 section {
-    /* width: 85%; */
-    /* margin: auto; */
     padding: 4% 5%;
     display: grid;
     grid-template-columns: auto auto;
@@ -71,25 +69,40 @@ section {
 
 .product-details,
 .product-images {
-    width: 42vw;
+    width: 45vw;
+}
+
+.product-main-image img,
+.product-preview-images {
+    width: 43vw;
 }
 
 .product-main-image img {
     height: 65vh;
-    width: 37vw;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.product-preview-images img {
-    width: 8vw;
-    border-radius: 5px;
-    margin: .5rem .5rem 0 0;
-    object-fit: cover;
+.product-preview-images {
+    display: flex;
 }
 
+.product-preview-images img {
+    width: 10vw;
+    border-radius: 5px;
+    object-fit: cover;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.product-preview-images img:last-child {
+    margin-right: 0px;
+}
+
+
 .product-details {
-    padding: 2rem;
+    padding-top: 2.5rem;
+    padding-left: 1rem;
     display: flex;
     flex-direction: column;
 }
@@ -162,7 +175,7 @@ section {
 .product-cart input {
     display: inline-block;
     border: none;
-    width: 25px;
+    width: 40px;
     padding: .7rem;
     outline: none;
     background-color: var(--light-grayish-blue);
@@ -192,7 +205,6 @@ section {
 
 /* mobile */
 
-.fa-bars,
 .mobile-view {
     display: none;
 }
@@ -201,26 +213,27 @@ section {
     cursor: pointer;
 }
 
-.mobile-nav-links {
+.toggleMenu {
     display: none;
 }
 
 .mobile-nav-links ul {
     background-color: white;
     width: 100vw;
-    position: relative;
-    top: 120px;
-    
+    position: absolute;
+    top: 73px;
+    left: 10px;
 }
 
-.mobile-nav-links ul li{
+.mobile-nav-links li {
     margin: 10px;
     display: block;
 }
 
-.mobile-nav-links ul li a{
+.mobile-nav-links a {
     display: inline-block;
     margin-bottom: 10px;
+    margin-left: 25px;
 }
 
 
@@ -233,59 +246,41 @@ section {
 
     .product-images {
         flex-direction: row;
+    }
 
+    .product-preview-images {
+        flex-direction: column;
+    }
+
+    .product-main-image img,
+    .product-preview-images {
+        height: 70vh;
     }
 
     .product-details {
-        width: 75vw;
-        padding: 2rem 0;
+        width: 80vw;
     }
 
     .product-main-image img {
-        height: 70vh;
         width: 75vw;
-        margin-right: 20px;
+        margin-right: 10px;
     }
 
     .product-preview-images img {
         height: 15vh;
-        width: 10vw;
+        margin-bottom: 5px;
+        flex: 1;
     }
 
-    .product-preview-images {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .product-preview-images img:last-child {
+        margin-bottom: 0px;
     }
+
 }
 
 @media (max-width: 800px) {
 
-    
-    .product-images {
-        flex-direction: column;
-    }
-
-    .product-main-image img {
-        width: 85vw;
-        height: 60vh;
-    }
-
-    .product-preview-images {
-        display: flex;
-        flex-direction: row;
-        width: 85vw;
-    }
-
-    .product-preview-images img {
-        width: 13vw;
-    }
-
-    .product-details {
-        width: 85vw;
-    }
-
-    .mobile-view, .fa-bars {
+    .mobile-view {
         display: block;
     }
 
@@ -293,16 +288,30 @@ section {
         display: none;
     }
 
-    .user-controls {
-        position: absolute;
-        top: 15px;
-        right: 20px;
+    .product-images {
+        flex-direction: column;
     }
 
-    .mobile-view > ul{
-        position: absolute;
-        top: 20px;
-        left: 20px;
+    .product-preview-images {
+        flex-direction: row;
+    }
+
+    .product-main-image img,
+    .product-preview-images,
+    .product-details {
+        width: 85vw;
+    }
+
+    .product-main-image img
+    {
+        height: 65vh;
+    }
+    .product-preview-images {
+        height: 15vh;
+    }
+
+    .product-details{
+        padding-left: 0px;
     }
 
 }
